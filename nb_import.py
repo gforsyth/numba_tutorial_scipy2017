@@ -60,6 +60,7 @@ class NotebookLoader(object):
               if (cell.cell_type == 'code' and 
                       '%matplotlib' not in cell.source and 
                       '%timeit' not in cell.source and 
+                      '%lprun' not in cell.source and
                       '#skip' not in cell.source):
                 # transform the input to executable Python
                 code = self.shell.input_transformer_manager.transform_cell(cell.source)
