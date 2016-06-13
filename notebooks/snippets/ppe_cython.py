@@ -19,8 +19,8 @@ def pressure_poisson(numpy.ndarray[numpy.float_t, ndim=2] p,
 
     iter_diff = l2_target + 1
 
+    n = 0
     while iter_diff > l2_target:
-        n = 0
         pn = p.copy()
         for j in range(1, J - 1):
             for i in range(1, I - 1):
