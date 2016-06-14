@@ -1,4 +1,5 @@
 *.so
 *.f90
+*.lprof
 .ipynb_checkpoints
 __pycache__
