@@ -87,3 +87,19 @@ def quiver_plot(u, v, p, nx=41):
     pyplot.quiver(X[::qs, ::qs], Y[::qs, ::qs], u[::qs, ::qs], v[::qs, ::qs])
     pyplot.xlabel('$x$', fontsize=18)
     pyplot.ylabel('$y$', fontsize=18)
+
+
+def velocity_term(b, rho, dt, u, v, dx):
+    b[1:-1, 1:-1] = (
+        rho * dx / 16 *
+        (2 / dt * (u[1:-1, 2:] -
+                   u[1:-1, :-2] +
+                   v[2:, 1:-1] -
+                   v[:-2, 1:-1]) -
+         2 / dx * (u[2:, 1:-1] - u[:-2, 1:-1]) *
+                  (v[1:-1, 2:] - v[1:-1, :-2]) -
+        (u[1:-1, 2:] - u[1:-1, :-2])**2 / dx -
+        (v[2:, 1:-1] - v[:-2, 1:-1])**2 / dx)
+                    )
+
+    return b
