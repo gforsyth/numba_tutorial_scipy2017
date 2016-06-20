@@ -1,5 +1,5 @@
 @jit(nopython=True)
-def pressure_poisson(p, b, l2_target=1e-3):
+def pressure_poisson(p, b, l2_target):
     pn = p.copy()
     I, J = b.shape
 
@@ -18,11 +18,11 @@ def pressure_poisson(p, b, l2_target=1e-3):
 
         for i in range(I):
             p[i, 0] = p[i, 1]
-            p[i, -1] = p[i, -2]
+            p[i, -1] = 0
 
         for j in range(J):
             p[0, j] = p[1, j]
-            p[-1, j] = 0
+            p[-1, j] = p[-2, j]
 
         if n % 10 == 0:
             iter_diff = numpy.sqrt(numpy.sum((p - pn)**2)/numpy.sum(pn**2))
