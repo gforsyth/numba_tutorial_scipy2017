@@ -2,10 +2,14 @@ import importlib
 import sys
 from warnings import warn
 
+onpy2 = False
+
 try:
     assert sys.version_info >= (3,0)
+    import importlib.util
 except AssertionError:
     warn('This tutorial is written for Python 3.  Legacy Python is not explicitly supported.')
+    onpy2 = True
 
 def tuple_version(version):
     return tuple(int(x) for x in version.strip('<>+-=.').split('.'))
@@ -31,10 +35,15 @@ def main():
                         'numba', 'llvmlite', 'line_profiler', 'IPython',]
     missing_modules = []
     for mod in required_modules:
-        try:
-            importlib.import_module(mod)
-        except ImportError:
-            missing_modules.append(mod)
+        if not onpy2:
+            spec = importlib.util.find_spec(mod)
+            if spec is None:
+                missing_modules.append(mod)
+        else:
+            try:
+                importlib.import_module(mod)
+            except ImportError:
+                missing_modules.append(mod)
 
     if missing_modules:
         print('The following modules are required but not installed:')
