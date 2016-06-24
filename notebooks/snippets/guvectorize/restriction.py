@@ -20,3 +20,11 @@ def restrict_2d_gvec(fine, size, coarse):
                     fine[2 * i + 1, 2 * j]) +
 
                     1/4 * fine[i, j])
+
+    for i in range(I):
+        coarse[i, 0] = fine[2 * i, 0]
+        coarse[i, -1] = fine[2 * i, -1]
+
+    for j in range(J):
+        coarse[0, j] = fine[0, 2 * j]
+        coarse[-1, j] = fine[-1, 2 * j]
