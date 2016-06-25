@@ -1,3 +1,7 @@
+# Numba: Tell those C++ bullies to get lost 
+
+This is the repository for the Scipy 2016 tutorial.  The tutorial will be presented as a set of Jupyter notebooks with exercises sprinkled throughout.
+
 1. [Installation](#installation-instructions)
 2. [Optional extras](#optional-extras)
 3. [Check your installation](#check-installation)
@@ -91,6 +95,12 @@ If that installed successfully then you can continue to install the rest of the 
 
 ```console
 pip install numpy matplotlib jupyter ipython numba line_profiler 
+```
+
+or 
+
+```console
+pip install -r requirements.txt
 ```
 
 # Optional extras
