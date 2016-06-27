@@ -11,7 +11,7 @@ This is the repository for the Scipy 2016 tutorial.  The tutorial will be presen
 
 We _strongly_, *strongly*, __strongly__ encourage you to use `conda` to install the required packages for this tutorial.  There are non-Python dependencies required that make manual installation or installing with `pip` very involved.  
 
-Note also that this tutorial is written in Python 3.  No guarantees of any kind are made that it will be compatible with Python 2.
+Note also that this tutorial is written for  Python 3.5.  Most things will still work on Python 3.4.  No guarantees of any kind are made that it will be compatible with Python 2.
 
 ## Regarding `matplotlib`
 
