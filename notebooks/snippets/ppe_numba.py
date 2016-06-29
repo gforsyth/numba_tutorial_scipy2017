@@ -1,6 +1,5 @@
 @jit(nopython=True)
 def pressure_poisson(p, b, l2_target):
-    pn = p.copy()
     I, J = b.shape
 
     iter_diff = l2_target + 1
