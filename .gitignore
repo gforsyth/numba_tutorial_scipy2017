@@ -3,3 +3,5 @@
 *.lprof
 .ipynb_checkpoints
 __pycache__
+
+notebooks/fail.html
