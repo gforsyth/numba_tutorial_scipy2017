@@ -23,7 +23,7 @@ This tutorial uses the Viridis colormap pretty much everywhere we can use a colo
 Download the `environment.yml` file in the root of this repository, e.g.
 
 ```console
-wget https://github.com/gforsyth/numba.tutorial.2016/environment.yml
+wget https://raw.githubusercontent.com/barbagroup/numba_tutorial_scipy2016/master/environment.yml
 ```
 
 and then create the environment with
