@@ -136,3 +136,9 @@ Once you have downloaded all of the requires libraries/packages, you can run the
 ```console
 python check_install.py
 ```
+
+# Video of the live tutorial
+
+Check out the video of the live tutorial at SciPy 2016 (filmed Monday 11 July).
+
+[![vid](./slides/tutorial-vid.png)](https://youtu.be/SzBi3xdEF2Y)
