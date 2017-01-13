@@ -48,9 +48,14 @@ activate numbatutorial
 ### Option b) Install the required packages 
 
 ```console
-conda install jupyter ipython numpy numba line_profiler matplotlib line_profiler
+conda install jupyter ipython numpy numba line_profiler matplotlib
 ```
 
+```console
+pip install line_profiler
+```
+
+**Note**: Do not use `conda` to install `line_profiler`; the version available in `conda` default channels is out of date.
 
 
 
