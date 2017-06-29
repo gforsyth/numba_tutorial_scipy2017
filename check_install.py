@@ -18,14 +18,14 @@ def check_versions():
     version_trouble=False
     numba = importlib.import_module('numba')
     numba_version = tuple_version(numba.__version__)
-    if numba_version < (0, 26, 0):
-        print('Please update Numba to version 0.26.0')
+    if numba_version < (0, 33, 0):
+        print('Please update Numba to version 0.33.0')
         version_trouble=True
 
     mpl = importlib.import_module('matplotlib')
     mpl_version = tuple_version(mpl.__version__)
-    if mpl_version < (1, 5, 0):
-        print('Please update matplotlib to version 1.5.0 or higher')
+    if mpl_version < (2, 0, 0):
+        print('Please update matplotlib to version 2.0.0 or higher')
         version_trouble=True
 
     return version_trouble
