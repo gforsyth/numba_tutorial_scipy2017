@@ -6,5 +6,5 @@
    - numba
    - jupyter
    - ipython
-   - line-profiler
+   - line_profiler
    - cython
