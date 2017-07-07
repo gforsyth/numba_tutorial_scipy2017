@@ -71,7 +71,7 @@ pip install cython
 We recommend you also install the Jupyter notebook extensions.
 
 ```console
-pip install https://github.com/ipython-contrib/IPython-notebook-extensions/archive/master.zip --user
+conda install -c conda-forge jupyter_contrib_nbextensions
 ```
 
 Once they are installed, start a notebook server
