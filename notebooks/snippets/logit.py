@@ -1,4 +1,4 @@
-@vectorize([float64(float64)])
+@vectorize(['float64(float64)'])
 def logit(a):
     return math.log(a / (1 - a))
 
